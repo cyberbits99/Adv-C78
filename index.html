@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(163, 9, 155);
+            }
+
+            #heading {
+                color:#f5970b;
+                font-family: cursive;
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color: rgb(31, 209, 25);
+            }
+
+            #image {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: rgb(255, 211, 211);
+            }
+
+            #name {
+               color: #0e9e0e; 
+               font-weight: bold;
+               font-size: 22px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1 id="heading">THE FAMILY BOOK</h1>
+
+        <img id="image" 
+        src="https://kbimages1-a.akamaihd.net/73c58c2c-c205-49ac-a745-86d25c8081ee/1200/1200/False/the-family-book.jpg">
+
+        <h4 id="name"></h4>
+
+        <button onclick="next()">
+            Next
+        </button>
+
+
+        <script>
+            var members= [
+                "https://i.pinimg.com/originals/d5/6c/d2/d56cd25436d0d3f56ad2f143750f7455.png",
+                "https://i.pinimg.com/originals/98/93/ab/9893abe2999501b97dfbf283c05ee765.jpg",
+                "https://cdn1.vectorstock.com/i/thumb-large/87/90/a-father-standing-vector-1658790.jpg",
+                "https://previews.123rf.com/images/vectorkif/vectorkif1912/vectorkif191200093/136284898-beautiful-indian-woman-pretty-lady-cartoon-character-usable-for-traditional-holidays-lohri-pongal-in.jpg",
+                "https://i.pinimg.com/originals/20/b4/9f/20b49f0e0cd8a150c0627ed4c68d5f36.jpg",
+                "https://thumbs.dreamstime.com/z/laughing-small-kid-jumping-excitement-cute-cartoon-vector-design-102501887.jpg",
+            ];
+            var names= [
+                "Grandfather",
+                "Grandmother",
+                "Dad",
+                "Mom",
+                "Me",
+                "My borther"
+            ];
+            var i=0;
+            function next(){
+            document.getElementById("image").src=members[i];
+            document.getElementById("name").innerHTML=names[i];
+            if (i>4){
+            i=0;
+            }
+            else i++;
+            };
+        </script>
+    </body>
+</html>
